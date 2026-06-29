@@ -1,0 +1,36 @@
+name: Node.js CI
+
+# Se ejecutará cada vez que hagas push a main o abras un Pull Request
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Clona tu código desde GitHub
+    - name: Checkout del repositorio
+      uses: actions/checkout@v4
+
+    # 2. Instala Node.js
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '26.x'
+        cache: 'npm'
+
+    # 3. Instala las dependencias (Express, Apollo, Prisma, etc.)
+    - name: Instalar dependencias
+      run: npm install
+
+    # 4. Genera el cliente de Prisma (Obligatorio para que TS no falle)
+    - name: Generar Prisma Client
+      run: npx prisma generate
+
+    # 5. Verifica que no haya errores de TypeScript
+    - name: Comprobar TypeScript (Build)
+      run: npm run build
