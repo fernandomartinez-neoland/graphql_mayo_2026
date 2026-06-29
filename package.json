@@ -1,0 +1,43 @@
+{
+  "name": "graphql_mayo_2026",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000g\u0000r\u0000a\u0000p\u0000h\u0000q\u0000l\u0000_\u0000m\u0000a\u0000y\u0000o\u0000_\u00002\u00000\u00002\u00006\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandomartinez-neoland/graphql_mayo_2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/fernandomartinez-neoland/graphql_mayo_2026/issues"
+  },
+  "homepage": "https://github.com/fernandomartinez-neoland/graphql_mayo_2026#readme",
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "@as-integrations/express4": "^1.1.2",
+    "@prisma/adapter-pg": "^7.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "graphql": "^16.14.2",
+    "pg": "^8.22.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^7.8.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.0.1",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.8.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
