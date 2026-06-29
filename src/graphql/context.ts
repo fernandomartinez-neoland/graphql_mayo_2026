@@ -14,7 +14,7 @@ import { prisma } from "../config/prisma.js";
 
 // Tipo del contexto: describe qué hay disponible dentro de cada resolver.
 export interface AppContext {
-  prisma: typeof prisma;dd
+  prisma: typeof prisma;
 }
 
 // Función que Apollo ejecuta en cada request para crear el contexto.
